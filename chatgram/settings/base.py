@@ -25,12 +25,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'chat.apps.ChatConfig',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
@@ -66,6 +69,8 @@ WSGI_APPLICATION = 'chatgram.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+
+AUTH_USER_MODEL = 'users.User'
 
 DATABASES = {
     'default': {
