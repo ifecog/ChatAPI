@@ -24,7 +24,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 INSTALLED_APPS = [
     'users.apps.UsersConfig',
-    'chat.apps.ChatConfig',
     
     'django.contrib.admin',
     'django.contrib.auth',
@@ -66,11 +65,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'chatgram.wsgi.application'
 
+AUTH_USER_MODEL = 'users.User'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
-AUTH_USER_MODEL = 'users.User'
 
 DATABASES = {
     'default': {
@@ -122,7 +120,6 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_ROOT = BASE_DIR / 'media'
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
